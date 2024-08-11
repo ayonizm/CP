@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    printf("heljkyfkyfkuyfvlo world\n");
+    int x = 9;
+    printf("ami ayon\n");
     return 0;
 }
