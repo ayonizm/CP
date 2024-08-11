@@ -1,1 +1,0 @@
-{"name":"Local: ar2","url":"c:\\Users\\USER\\Desktop\\phitron\\ar2.c","tests":[{"id":1720256093069,"input":"5\n10 20 30 40 50","output":"50 40 30 20 10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\ar2.c","group":"local","local":true}

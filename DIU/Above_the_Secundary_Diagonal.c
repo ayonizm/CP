@@ -18,14 +18,14 @@ int main()
     int k = 11;
     for (int i = 0; i < 12; i++)
     {
-       for (int j = 0; j < k; j++)
-       {
-        count = count + ar[j][i];
-        count1++;
-       }
-       k--;
+        for (int j = 0; j < k; j++)
+        {
+            count = count + ar[j][i];
+            count1++;
+        }
+        k--;
     }
-    
+
     if (x == 'S')
     {
         printf("%.1lf\n", count);

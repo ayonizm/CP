@@ -9,6 +9,7 @@ int main()
     int a, b;
     scanf("%d %d", &a, &b);
     sum(a, b);
+    int x = 98;
 
     return 0;
 }
