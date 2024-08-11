@@ -1,0 +1,1 @@
+{"name":"Local: pattern2","url":"c:\\Users\\USER\\Desktop\\phitron\\lockdown\\pattern2.c","tests":[{"id":1721844170591,"input":"4","output":"   *\n  ***\n *****\n*******\n*******\n *****\n  ***\n   *"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\lockdown\\pattern2.c","group":"local","local":true}

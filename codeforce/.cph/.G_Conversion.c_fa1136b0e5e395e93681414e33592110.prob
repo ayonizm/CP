@@ -1,0 +1,1 @@
+{"name":"Local: G_Conversion","url":"c:\\Users\\USER\\Desktop\\phitron\\YO\\G_Conversion.c","tests":[{"id":1719941624239,"input":"a","output":"A"},{"id":1719941631049,"input":"w","output":"W"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\YO\\G_Conversion.c","group":"local","local":true}

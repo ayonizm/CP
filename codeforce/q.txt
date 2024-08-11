@@ -1,0 +1,9 @@
+15 ms., memory: 0 KB, exit code: 0, checker exit code: 1, verdict: WRONG_ANSWER
+Input
+34688642 -851839419 395784949 490743112
+Output
+YES
+Answer
+NO
+Checker Log
+wrong answer 1st lines differ - expected: 'NO', found: 'YES'

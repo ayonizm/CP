@@ -1,0 +1,1 @@
+{"name":"Local: ui","url":"c:\\Users\\USER\\Desktop\\phitron\\ui.c","tests":[{"id":1722502764125,"input":"3\n2 3 3\n1\n3\n1 3 2\n1\n0","output":"3\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\ui.c","group":"local","local":true}

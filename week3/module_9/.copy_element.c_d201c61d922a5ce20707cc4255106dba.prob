@@ -1,0 +1,1 @@
+{"name":"Local: copy_element","url":"c:\\Users\\USER\\Desktop\\phitron\\week3\\copy_element.c","tests":[{"id":1716887237757,"input":"5\n10 20 30 40 50\n3\n60 70 80","output":"10 20 30 40 50 60 70 80"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\week3\\copy_element.c","group":"local","local":true}
