@@ -1,0 +1,1 @@
+{"name":"Local: FNDI_s_Staircase","url":"c:\\Users\\USER\\Desktop\\phitron\\DIU\\FNDI_s_Staircase.c","tests":[{"id":1723145356888,"input":"4\n109 108 30","output":"0.0600\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\DIU\\FNDI_s_Staircase.c","group":"local","local":true}

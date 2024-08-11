@@ -1,0 +1,1 @@
+{"name":"Local: tictactoe","url":"c:\\Users\\USER\\Desktop\\phitron\\tictactoe.c","tests":[{"id":1721335586963,"input":"","output":"    |    |    \n    |    |    \n----      ----\n\n----      ----\n    |    |    \n    |    |  "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\tictactoe.c","group":"local","local":true}

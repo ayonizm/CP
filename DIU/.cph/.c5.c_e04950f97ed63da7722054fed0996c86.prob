@@ -1,0 +1,1 @@
+{"name":"Local: c5","url":"c:\\Users\\USER\\Desktop\\phitron\\DIU\\c5.c","tests":[{"id":1722505660582,"input":"4 7\n11 12 7 7 7 13 14\n15 6 7 42 7 7 42\n98 -5 7 7 7 42 7\n-1 42 3 9 7 7 7\n","output":"2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\DIU\\c5.c","group":"local","local":true}
