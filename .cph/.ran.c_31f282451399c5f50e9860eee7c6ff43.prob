@@ -1,1 +1,0 @@
-{"name":"Local: ran","url":"c:\\Users\\USER\\Desktop\\phitron\\ran.c","tests":[{"id":1722457954867,"input":"6\n1\n>....<\n\n","output":"*\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\ran.c","group":"local","local":true}
