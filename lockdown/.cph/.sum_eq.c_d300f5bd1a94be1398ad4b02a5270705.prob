@@ -1,1 +1,0 @@
-{"name":"Local: sum_eq","url":"c:\\Users\\USER\\Desktop\\phitron\\lockdown\\sum_eq.c","tests":[{"id":1721663115175,"input":"5\n10 20 30 40 50\n50","output":"paisi mamaaaaaaaaaaaaaa"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\lockdown\\sum_eq.c","group":"local","local":true}

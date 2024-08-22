@@ -1,1 +1,0 @@
-{"name":"Local: str4","url":"c:\\Users\\USER\\Desktop\\phitron\\str4.c","tests":[{"id":1714548653032,"input":"5\n0 2 3 4 0","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\str4.c","group":"local","local":true}
