@@ -12,7 +12,7 @@ int main()
     }
     if (y < 0)
     {
-        y = y * -1;
+        y = y * 1;
     }
     int ans = x - y;
     if (ans < 0)
