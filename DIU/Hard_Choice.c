@@ -1,27 +1,35 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 int main()
 {
-    int x1, y1, z1;
-    int x2, y2, z2;
-    scanf("%d %d %d", &x1, &y1, &z1);
+    int x, y, z, a, b, c;
+    scanf("%d %d %d", &x, &y, &z);
+    scanf("%d %d %d", &a, &b, &c);
+    if (a <= x && b <= y && c <= z)
+    {
 
-    scanf("%d %d %d", &x2, &y2, &z2);
-    int sum = 0;
-    if (x1 < x2)
-    {
-        sum = sum + (x2 - x1);
-    }
-    if (y1 < y2)
-    {
-        sum = sum + (y2 - y1);
-    }
-    if (z1 < z2)
-    {
-        sum = sum + (z2 - z1);
+        printf("0\n");
     }
 
-    printf("%d\n", sum);
+    else if (a > x && b > y && c > z)
+    {
 
+        printf("%d\n", abs((a - x) + (b - y) + (c - z)));
+    }
+    else if (a < x && b > y && c > z)
+    {
+        printf("%d\n", abs((b - y) + (c - z)));
+    }
+
+    else if (a > x && b < y && c > z)
+    {
+
+        printf("%d\n", abs((a - x) + (c - z)));
+    }
+    else if (a > x && b > y && c < z)
+    {
+
+        printf("%d\n", abs((a - x) + (b - y)));
+    }
     return 0;
 }

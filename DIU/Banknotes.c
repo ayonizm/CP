@@ -1,30 +1,52 @@
 #include <stdio.h>
-
 int main()
 {
-    int notes, baki;
+    int a, sum, sum1, sum2, sum3, sum4, sum5, sum6;
+    scanf("%lf", &a);
 
-    scanf("%d", &notes);
+    if (a > 100.00)
+    {
+        sum = a / 100;
+        a = (a % 100) * 100.00;
+    }
+    // printf("%lf\n", a);
 
-    printf("%d\n", notes);
-    printf("%d nota(s) de R$ 100,00\n", notes / 100);
-    baki = (notes % 100);
+    if (a > 50.00)
+    {
+        sum1 = a / 50;
+        a = (a % 50) * 50;
+    }
 
-    printf("%d nota(s) de R$ 50,00\n", baki / 50);
-    baki = (baki % 50);
+    if (a > 20.00)
+    {
+        sum2 = a / 20;
+        a = (a % 20) * 20;
+    }
 
-    printf("%d nota(s) de R$ 20,00\n", baki / 20);
-    baki = (baki % 20);
+    if (a > 10.00)
+    {
+        sum3 = a / 10;
+        a = (a % 10) * 10;
+    }
 
-    printf("%d nota(s) de R$ 10,00\n", baki / 10);
-    baki = (baki % 10);
+    if (a > 5.00)
+    {
+        sum4 = a / 5;
+        a = (a % 5) * 5;
+    }
 
-    printf("%d nota(s) de R$ 5,00\n", baki / 5);
-    baki = (baki % 5);
+    if (a > 2.00)
+    {
+        sum5 = a / 2;
+        a = (a % 2) * 2;
+    }
 
-    printf("%d nota(s) de R$ 2,00\n", baki / 2);
-    baki = (baki % 2);
+    if (a > 1.00)
+    {
+        sum6 = a / 1;
+        a = (a % 1) * 1;
+    }
 
-    printf("%d nota(s) de R$ 1,00\n", baki / 1);
+    printf("%d %d %d %d %d %d %d", sum, sum1, sum2, sum3, sum4, sum5, sum6);
     return 0;
 }

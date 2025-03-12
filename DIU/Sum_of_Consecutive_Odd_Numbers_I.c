@@ -1,28 +1,28 @@
 #include <stdio.h>
 int main()
 {
-    int x, y;
-    int min, max;
-    int count = 0;
-    scanf("%d %d", &x, &y);
-    if (x > y)
+
+    int a, b, min, max, sum = 0;
+    scanf("%d %d", &a, &b);
+    if (a > b)
     {
-        max = x;
-        min = y;
+        max = a;
+        min = b;
     }
-    else if (x < y)
+    else
     {
-        max = y;
-        min = x;
+        min = a;
+        max = b;
     }
+
     for (int i = min + 1; i < max; i++)
     {
         if (i % 2 != 0)
         {
-            count = count + i;
+            sum = sum + i;
         }
     }
-    printf("%d\n", count);
+        printf("%d\n", sum);
 
     return 0;
 }

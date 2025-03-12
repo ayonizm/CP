@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define op() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl "\n"
+#define ll long long int
+int main(){
+    op();
+    ll n;
+    cin >> n;
+    while (n--)
+    {
+        double k;
+        cin >> k;
+        k = pow(k, 2.0);
+        double p = (3.0 / 2.0) * sqrt(3.0);
+        printf("%.5lf\n", (p * k)-0.00001);
+    }
+    
+    return 0;
+}

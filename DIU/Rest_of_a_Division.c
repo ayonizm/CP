@@ -1,20 +1,13 @@
 #include <stdio.h>
 int main()
 {
-    int x, y;
-    scanf("%d %d", &x, &y);
-    if (x > y)
-    {
-        int temp = x;
-        x = y;
-        y = temp;
-    }
-
-    for (int i = x + 1; i < y; i++)
+    int a, b;
+    scanf("%d %d", &a, &b);
+    for (int i = a; i <= b; i++)
     {
         if (i % 5 == 2 || i % 5 == 3)
         {
-            printf("%d\n", i);
+            printf("%d\n",i);
         }
     }
 

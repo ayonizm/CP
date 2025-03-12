@@ -2,28 +2,25 @@
 #include <string.h>
 int main()
 {
-    int no = 0;
-    char x[1001];
-    scanf("%s", &x);
-    int len = strlen(x);
+    char name[1020];
+    scanf("%s", &name);
+    int len = strlen(name);
+    char copy[1020];
+    strcpy(copy, name);
 
     for (int i = 0; i < len / 2; i++)
     {
-        if (x[i] == x[len - i - 1])
-        {
-        }
-        else
-        {
-            no++;
-        }
+        char temp = name[i];
+        name[i] = name[len - i - 1];
+        name[len - i - 1] = temp;
     }
-    if (no == 0)
+    if (strcmp(copy, name) == 0)
     {
-        printf("YES");
+        printf("YES\n");
     }
     else
     {
-        printf("NO");
+        printf("NO\n");
     }
 
     return 0;

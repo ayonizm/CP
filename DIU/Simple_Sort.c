@@ -1,41 +1,60 @@
 #include <stdio.h>
+
 int main()
 {
-    int number[3];
-    int big, small, unknown;
-    for (int i = 0; i < 3; i++)
+    int a, b, c, min, max, mid;
+
+    // Read the input values
+    scanf("%d %d %d", &a, &b, &c);
+
+    // Find the minimum, middle, and maximum values
+    if (a <= b && a <= c)
     {
-        scanf("%d", &number[i]);
-    }
-    big = number[0];
-    small = number[0];
-    for (int i = 0; i < 3; i++)
-    {
-        if (number[i] > big)
+        min = a;
+        if (b <= c)
         {
-            big = number[i];
+            mid = b;
+            max = c;
         }
-        if (number[i] < small)
+        else
         {
-            small = number[i];
+            mid = c;
+            max = b;
+        }
+    }
+    else if (b <= a && b <= c)
+    {
+        min = b;
+        if (a <= c)
+        {
+            mid = a;
+            max = c;
+        }
+        else
+        {
+            mid = c;
+            max = a;
+        }
+    }
+    else
+    {
+        min = c;
+        if (a <= b)
+        {
+            mid = a;
+            max = b;
+        }
+        else
+        {
+            mid = b;
+            max = a;
         }
     }
 
-    printf("%d\n", small);
-    for (int i = 0; i < 3; i++)
-    {
-        if (number[i] != big && number[i] != small)
-        {
-            unknown = number[i];
-        }
-    }
-    printf("%d\n", unknown);
-    printf("%d\n", big);
-    printf("\n");
-    for (int i = 0; i < 3; i++)
-    {
-        printf("%d\n", number[i]);
-    }
+    // Output the sorted values
+    printf("%d\n", min);
+    printf("%d\n", mid);
+    printf("%d\n", max);
 
     return 0;
 }

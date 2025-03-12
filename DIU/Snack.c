@@ -1,15 +1,36 @@
 #include <stdio.h>
 int main()
 {
-    int n,unit;
-    double code[5];
-    scanf("%d %d", &n, &unit);
-    code[0]=4.00;
-    code[1]=4.50;
-    code[2]=5.00;
-    code[3]=2.00;
-    code[4]=1.50;
-    printf("Total: R$ %.2lf\n",code[n-1]*unit);
+    int x, ghorardim;
+    double y, sum;
+    scanf("%d %d", &x, &ghorardim);
 
+    if (x == 1)
+    {
+        y = 4.00;
+    }
+
+    else if (x == 2)
+    {
+        y = 4.50;
+    }
+    else if (x == 3)
+    {
+        y = 5.00;
+    }
+    else if (x == 4)
+    {
+        y = 2.00;
+    }
+
+    else if (x == 5)
+    {
+        y = 4.50;
+    }
+    
+
+    sum = y *ghorardim;
+
+    printf("Total: R$ %.2lf\n", sum);
     return 0;
 }
