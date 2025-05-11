@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayon Chowdhury - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            background: url('ayon-cover.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px #000;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        nav {
+            background: #222;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about,
+        .coding {
+            background: #1e1e1e;
+            margin-top: 2rem;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .about:hover,
+        .coding:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s forwards;
+        }
+
+        .logo {
+            width: 24px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div><strong>Ayon's Portfolio</strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#success">Success Story</a>
+            <a href="#coding">Coding Profiles</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Ayon Chowdhury</h1>
+        <p>Programmer | Dreamer | Achiever</p>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hey there! I'm Ayon Chowdhury. From solving problems on competitive platforms to building dynamic web apps,
+            I’m always hungry to learn and grow. This is my journey.</p>
+    </section>
+
+    <section id="success" class="about">
+        <h2>My Success Story</h2>
+        <p>I started with curiosity and a passion for coding. I tackled challenges one by one and kept leveling up. From
+            sleepless nights to solving the toughest problems, my dedication brought me here. This site is a celebration
+            of the steps I took and the miles I've yet to go.</p>
+    </section>
+
+    <section id="coding" class="coding">
+        <h2>Coding Profiles</h2>
+        <ul>
+            <li>
+                <img src="https://sta.codeforces.com/s/27307/images/codeforces-logo-with-telegram.png"
+                    alt="Codeforces Logo" class="logo">
+                Codeforces: <a href="https://codeforces.com/profile/ayon6594" target="_blank">ayon6594</a>
+            </li>
+            <li>
+                <img src="https://avatars.githubusercontent.com/u/11449694?s=200&v=4" alt="VJudge Logo" class="logo">
+                VJudge: <a href="https://vjudge.net/user/ayonizm" target="_blank">ayonizm</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ayon Chowdhury. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
