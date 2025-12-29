@@ -1,0 +1,32 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "vector": "cpp",
+        "iostream": "cpp",
+        "ios": "cpp",
+        "utility": "cpp",
+        "chrono": "cpp",
+        "xstring": "cpp",
+        "map": "cpp",
+        "complex": "cpp",
+        "cstdlib": "cpp",
+        "valarray": "cpp",
+        "deque": "cpp",
+        "format": "cpp",
+        "list": "cpp",
+        "xstddef": "cpp",
+        "atomic": "cpp",
+        "forward_list": "cpp",
+        "system_error": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xtree": "cpp",
+        "unordered_map": "cpp",
+        "algorithm": "cpp",
+        "xutility": "cpp",
+        "random": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp"
+    }
+}

@@ -1,31 +1,56 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define op() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define op()                      \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define test(t) \
+    int t;      \
+    cin >> t;   \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
 #define endl "\n"
-#define Yes cout << "Yes\n"
-#define YES cout << "YES\n"
-#define yes cout << "yes\n"
-#define No cout << "No\n"
-#define NO cout << "NO\n"
-#define no cout << "no\n"
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(vec) vec.begin(), vec.end()
+#define PI 3.141592653589793238462
+#define debug(x) cout << #x << " " << x << endl;
 #define ll long long int
-int hello(int a, int b)
+vector<int> x;
+int ar[50];
+void solve()
 {
-    if (a == b)
+    int n;
+    cin >> n;
+    int m;
+    cin >> m;
+    for (int i = 0; i < n; i++)
     {
-        return 1;
+        int x, y;
+        cin >> x >> y;
+        ar[x]++;
+        ar[y + 1]--;
     }
-    if (a > b)
+    for (int i = 1; i <=m; i++)
     {
-        return 0;
+        ar[i] += ar[i - 1];
+        if(!ar[i]){
+            x.pb(i);
+        }
     }
-    return hello(a + 1, b) + hello(a + 2, b) + hello(a + 3, b);
+    cout << x.size() << endl;
+    for(auto v:x){
+        cout << v << " ";
+    }
 }
-
 int main()
 {
-    int a, b;
-    cin >> a >> b;
-    cout << hello(a, b) << endl;
+    op();
+    // test(t){
+        solve();
+    // }
     return 0;
 }

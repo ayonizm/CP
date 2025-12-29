@@ -1,59 +1,67 @@
-#include<bits/stdc++.h>
+//************************************************************
+//  █████  ██    ██   ██████   ███    ██ |
+// ██   ██ ██    ██  ██    ██  ████   ██ |
+// ███████   ████    ██    ██  ██ ██  ██ |
+// ██   ██    ██     ██    ██  ██  ██ ██ |
+// ██   ██    ██      ██████   ██   ████ |
+// ************************************************************/
+#include <bits/stdc++.h>
 using namespace std;
-#define op() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define op()                      \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define test(t) \
+    int t;      \
+    cin >> t;   \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
 #define endl "\n"
-#define Yes cout << "Yes\n"
-#define YES cout << "YES\n"
-#define yes cout << "yes\n"
-#define No cout << "No\n"
-#define NO cout << "NO\n"
-#define no cout << "no\n"
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(vec) vec.begin(), vec.end()
+#define PI 3.141592653589793238462
+#define debug(x) cout << #x << " " << x << endl;
 #define ll long long int
-int uB(vector<int> &arr, int x, int n)
+int bin(vector<int> &x, int tar)
 {
-    int low = 0, high = n - 1;
-    int ans = n;
-
-    while (low <= high)
+    int lo = -1;
+    int hi = x.size();
+    while (hi - lo > 1)
     {
-        int mid = (low + high) / 2;
+        int mid = (lo + hi) / 2;
 
-        if (arr[mid] > x)
+        if (x[mid] >= tar)
         {
-            ans = mid;
-
-            high = mid - 1;
+            hi = mid;
         }
         else
         {
-            low = mid + 1; 
+            lo = mid;
         }
     }
-    return ans;
+    return hi;
 }
-int main(){
+int main()
+{
     op();
-    ll n;
+    int n;
     cin >> n;
-    ll m;
+    int m;
     cin >> m;
-    vector<int> x;
+    vector<int> x(n);
     for (int i = 0; i < n; i++)
     {
-        int p;
-        cin >> p;
-        x.push_back(p);
+        cin >> x[i];
     }
     while (m--)
     {
-        int l;
-        cin >> l;
-        if (uB(x, n, l) == n)
-        {
-            cout << -1 << endl;
-            continue;
-        }
-        cout << (upper_bound(x.begin(),x.end(),l)-x.begin()) +1<< endl;
+        int p;
+        cin >> p;
+        cout << bin(x, p) << endl;
     }
 
     return 0;

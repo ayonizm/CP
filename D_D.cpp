@@ -4,26 +4,47 @@ using namespace std;
     ios_base::sync_with_stdio(0); \
     cin.tie(0);                   \
     cout.tie(0);
+#define test(t) \
+    int t;      \
+    cin >> t;   \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
 #define endl "\n"
-#define Yes cout << "Yes\n"
-#define YES cout << "YES\n"
-#define yes cout << "yes\n"
-#define No cout << "No\n"
-#define NO cout << "NO\n"
-#define no cout << "no\n"
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(vec) vec.begin(), vec.end()
+#define PI 3.141592653589793238462
+#define debug(x) cout << #x << " " << x << endl;
 #define ll long long int
-void pr(int n, int l = 1)
+int k = 0;
+void solve(int n,int p)
 {
-    if (l > n)
+    if(k==n){
         return;
-    cout << string(n - l, ' ') << string(2 * l - 1, '*') << endl;
-    pr(n, l + 1);
+    }
+    for (int i = 0; i < n-p+k; i++)
+    {
+        cout << " ";
+    }
+    for (int i = 0; i <p; i++)
+    {
+        cout << "*";
+    }
+    k++;
+    cout << endl;
+    solve(n,p+2);
 }
-
 int main()
 {
+    op();
+    // test(t){
+        int k = 1;
     int n;
     cin >> n;
-    pr(n);
+    solve(n,k);
+    // }
     return 0;
 }

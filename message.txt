@@ -1,0 +1,105 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define endl "\n"
+#define ot() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main() {
+    #ifndef ONLINE_JUDGE
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
+    #endif
+    ot();
+ 
+    ll n;
+    cin >> n;
+
+    while (n--)
+    {
+        string s, k;
+        cin >> s >> k;
+        if (s.size()==k.size())
+        {
+            for (ll i = 0; i < s.size(); i++)
+            {
+                if (s[i]=='?')
+                {
+                    s[i] = k[i];
+                }
+                
+            }
+
+            if (s.find(k)==string::npos)
+            {
+                cout << "NO" << endl;
+            }
+            else {
+                cout << "YES" << endl;
+                cout << s << endl;
+            }
+            continue;
+
+
+        }
+        string w = "?";
+        if (s.find(k) != string::npos && s.find(w) ==string::npos )
+        {
+            cout << "YES" << endl;
+            cout << s << endl;
+            continue;
+        }
+
+        ll p = 0;
+        for (ll i = 0; i < s.size(); i++)
+        {
+            // if (p==k.size())
+            // {
+            //     // cout << p << " " << k.size() - 1 << endl;
+            //     break;
+            // }
+            if (s[i]=='?' && p<k.size())
+            {
+                s[i] = k[p];
+                p++;
+            }
+            else if (s[i]==k[p])
+            {
+                p++;
+            }
+            
+
+
+        }
+
+        
+        
+        if (p < k.size())
+        {
+            // cout << 1111 << endl;
+            cout << "NO" << endl;
+            continue;
+        }
+
+        else {
+            cout << "YES" << endl;
+            for (ll i = 0; i < s.size(); i++)
+            {
+                if (s[i]=='?')
+                {
+                    cout << 'a';
+                }
+                else {
+                    cout << s[i];
+                }
+
+            }
+            cout << endl;
+
+        }
+
+
+
+
+    }
+    
+
+}

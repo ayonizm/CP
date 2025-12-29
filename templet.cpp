@@ -148,10 +148,10 @@ using namespace std;
 //             ll pow = 1;
 //             while (n % i == 0)
 //             {
-//                 pow *= i; // p^e
+//                 pow *= i;
 //                 n /= i;
 //             }
-//             pow *= i; // p^e+1
+//             pow *= i;
 //             sod *= (pow - 1) / (i - 1);
 //         }
 //     }
@@ -231,26 +231,43 @@ using namespace std;
 //         }
 //     }
 // }
-// int euler(int n)
-// {
-//     float result = n;
-//     for (int i = 2; i * i <= n; i++)
-//     {
-//         if (n % i == 0)
-//         {
-//             while (n % i == 0)
-//             {
-//                 n = n / i;
-//             }
-//             result = result * (1 - 1.0 / i);
-//         }
-//     }
-//     if (n > 1)
-//     {
-//         result = result * (1 - 1.0 / n);
-//     }
-//     return result;
-// }
+int euler(int n)
+{
+    float result = n;
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            while (n % i == 0)
+            {
+                n = n / i;
+            }
+            result = result * (1 - 1.0 / i);
+        }
+    }
+    if (n > 1)
+    {
+        result = result * (1 - 1.0 / n);
+    }
+    return result;
+}
+//another euler
+int phi(int n)
+{
+    int result = n;
+    for (int p = 2; p * p <= n; p++)
+    {
+        if (n % p == 0)
+        {
+            while (n % p == 0)
+                n /= p;           // remove all factors of p
+            result -= result / p; // apply formula
+        }
+    }
+    if (n > 1)
+        result -= result / n; // last prime factor if any
+    return result;
+}
 
 // binary expo without modulo
 // ll power(ll a, ll n)
@@ -277,7 +294,7 @@ using namespace std;
 //     return res;
 // }
 // binary expo with modulo
-ll power(ll a, ll n,ll p)
+ll power(ll a, ll n, ll p)
 {
     // n is the power and a is the number p is the MOD
     ll res = 1;
@@ -285,25 +302,42 @@ ll power(ll a, ll n,ll p)
     {
         if (n % 2)
         {
-            res =(res* a)%p;
+            res = (res * a) % p;
             n--;
         }
         else
         {
-            a =(a*a)%p;
+            a = (a * a) % p;
             n /= 2;
         }
     }
     return res;
+}
+vector<pair<int, int>> countCoprimePairs(int n)
+{
+    int count = 0;
+
+    vector<pair<int, int>> x;
+    for (int i = 2; i <= sqrt(n); i++)
+    {
+        if (n % i == 0)
+        {
+            if (__gcd(i, (n / i)) == 1)
+            {
+                x.push_back({i, (n / i)});
+                count++;
+            }
+        }
+    }
+
+    return x;
 }
 int main()
 {
     op();
     ll n;
     cin >> n;
-    ll m;
-    cin >> m;
-    ll mod = 1e7 + 10;
-    cout << power(n, m,mod);
+    // vector<pair<int, int>> x = countCoprimePairs(n);
+    cout << phi(n) << endl;
     return 0;
 }

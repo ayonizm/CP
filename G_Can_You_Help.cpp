@@ -1,0 +1,110 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define op()                      \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define test(t) \
+    int t;      \
+    cin >> t;   \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
+#define endl "\n"
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(vec) vec.begin(), vec.end()
+#define PI 3.141592653589793238462
+#define debug(x) cout << #x << " " << x << endl;
+#define ll long long int
+void solve()
+{
+    int n;
+    cin >> n;
+    char x[n][n];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cin >> x[i][j];
+        }
+    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n; j++)
+    //     {
+    //         debug(x[i][j]);
+    //     }
+    //     cout << endl;
+    // }
+    bool p= true;
+    for (int i = 0; i < n; i++)
+    {
+        int ct = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if(x[i][j]=='R'){
+                ct++;
+            }
+        }
+        if(ct==n){
+            p = false;
+        }
+        
+    }
+    for (int j = 0; j < n; j++)
+    {
+        int ct = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (x[i][j] == 'R')
+            {
+                ct++;
+            }
+        }
+        if (ct == n)
+        {
+            p = false;
+        }
+    }
+    int ct = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if(x[i][i]=='R'){
+            ct++;
+        }
+        
+    }
+    if(ct==n){
+        p = false;
+    }
+    int l1 = 0;
+    int kt = 0;
+    for (int i = n-1; i>=0; i++)
+    {
+        if (x[l1++][i] == 'R')
+        {
+            kt++;
+        }
+    }
+    if(kt==n){
+        p = false;
+    }
+    if(p){
+        cout << "Corrupted Image" << endl;
+    }
+    else{
+        cout << n * n << endl;
+    }
+    
+}
+int main()
+{
+    op();
+    // test(t){
+        solve();
+    // }
+    return 0;
+}

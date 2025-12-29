@@ -1,20 +1,57 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define op() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define op()                      \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define test(t) \
+    int t;      \
+    cin >> t;   \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
 #define endl "\n"
-int main(){
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(vec) vec.begin(), vec.end()
+#define PI 3.141592653589793238462
+#define debug(x) cout << #x << " " << x << endl;
+#define ll long long int
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> ar;
+    for (int i = 0; i < n; i++)
+    {
+        int t;
+        cin >> t;
+        ar.pb(t);
+    }
+    for (int i = 0; i < n/2; i++)
+    {
+        int t = ar[i];
+        ar[i] = ar[n - i - 1];
+        ar[n - i - 1] = t;
+        swap(ar[i], ar[n - i - 1]);
+    }
+    for(auto v:ar){
+        cout << v << " ";
+    }
+    
+    
+}
+int main()
+{
     op();
-    string x;
-    cin >> x;
-    string temp = x;
-    reverse(temp.begin(), temp.end());
-    if(x==temp){
-        cout << "YES" << endl;
-    }
-    else{
-
-        cout << "NO" << endl;
-    }
-
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+    // test(t){
+    solve();
+    // }
     return 0;
 }

@@ -1,40 +1,83 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define op() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define op()                      \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define test(t) \
+    int t;      \
+    cin >> t;   \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
 #define endl "\n"
-#define Yes cout << "Yes\n"
-#define YES cout << "YES\n"
-#define yes cout << "yes\n"
-#define No cout << "No\n"
-#define NO cout << "NO\n"
-#define no cout << "no\n"
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(vec) vec.begin(), vec.end()
+#define PI 3.141592653589793238462
+#define debug(x) cout << #x << " " << x << endl;
 #define ll long long int
-string hello(string s){
-    int sum = 0;
-    if(s.length()==1){
-        return s;
-    }
-    for (int i = 0; i < s.length(); i++)
+int cv(string s)
+{
+    int h = stoi(s.substr(0, 2));
+    int m = stoi(s.substr(3, 2));
+    string ay = s.substr(6, 2); 
+
+    if (ay == "AM")
     {
-        sum += (s[i] - '0');
+        if (h == 12){
+            h = 0;
+        }
     }
-    string k = to_string(sum);
-    return hello(k);
-    
+    else
+    {
+        if (h != 12){
+            h += 12;
+        }
+    }
+
+    return h * 60 + m;
 }
-int main(){
-    op();
-    while (1)
+void solve()
+{
+    string p;
+    getline(cin, p);
+    int k = cv(p);
+    int n;
+    cin >> n;
+    cin.ignore();
+    string ans = "";
+    while (n--)
     {
         string s;
-        cin >> s;
-        if(s[0]=='0'){
-            break;
-        }
-        cout << hello(s) << endl;
-    }
-    
-    
+        getline(cin, s);
 
+        string p1 = s.substr(0, 8);
+        string p2 = s.substr(9, 8);
+
+        int x1 = cv(p1);
+        int x2 = cv(p2);
+
+        if (x1 <= k && k <= x2){
+            ans += '1';
+        }
+        else{
+            ans += '0';
+        }
+    }
+    cout << ans << endl;
+}
+int main()
+{
+    op();
+    int t;
+    cin >> t;
+    cin.ignore();
+    while (t--)
+    {
+        solve();
+    }
     return 0;
 }

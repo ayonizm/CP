@@ -1,0 +1,1 @@
+{"name":"Local: quick_sort","url":"c:\\Users\\USER\\Desktop\\phitron\\quick_sort.cpp","tests":[{"id":1750563143331,"input":"6\n1 5 2 3 8 4","output":"1 2 3 4 5 8 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\USER\\Desktop\\phitron\\quick_sort.cpp","group":"local","local":true}

@@ -19,29 +19,32 @@ using namespace std;
 #define PI 3.141592653589793238462
 #define debug(x) cout << #x << " " << x << endl;
 #define ll long long int
-void solve()
-{
-    ll a, b;
-    cin >> a >> b;
-    vector<ll> x1;
-    for (int i = 0; i < a; i++)
-    {
-        ll p;
-        cin >> p;
-        x1.pb(p);
-    }
-    
-    vector<ll> pre;
-    pre.pb(x1[0]);
-    for (int i = 1; i < x1.size(); i++)
-    {
-        pre[i] = pre[i - 1] + x1[i];
-    }
-    
-}
+const int N = 2e5 + 10;
+ll rr[N];
+int a[N], t, n, q, x;
+
 int main()
 {
     op();
-    
-    return 0;
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        ll n, q;
+        cin >> n >> q;
+        memset(rr, 0, sizeof rr);
+        for (int i = 1; i <= n; i++)
+        {
+            cin >> a[i];
+            rr[i] = rr[i - 1] + a[i];
+            a[i] = max(a[i - 1], a[i]);
+        }
+        while (q--)
+        {
+            cin >> x;
+            int step = upper_bound(a + 1, a + n + 1, x) - 1 - a;
+            cout << rr[step] << ' ';
+        }
+        cout << '\n';
+    }
 }
