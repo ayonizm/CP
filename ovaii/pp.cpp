@@ -1,14 +1,21 @@
-// Author: ayonizm
-// Date: 2026-01-06
-// Time: 23:03:09
+// Author: ayon6594
+// Date: 2026-01-03
+// Time: 21:41:07
 #include <bits/stdc++.h>
 using namespace std;
 #define op() \
     ios_base::sync_with_stdio(0); \
     cin.tie(0); \
     cout.tie(0);
+#define test(t) \
+    int t; \
+    cin >> t; \
+    while (t--)
+#define MOD 1000000007
+#define MOD1 998244353
 #define endl "\n"
 #define pb push_back
+#define mp make_pair
 #define ff first
 #define ss second
 #define all(vec) vec.begin(), vec.end()
@@ -16,48 +23,33 @@ using namespace std;
 #define debug(x) cout << #x << " " << x << endl;
 #define ll long long int
 void solve() {
-	ll a;
-	cin >> a;
-	vector<int>x;
-	int ev = 0;
-	int od = 0;
-	ll sum = 0;
+	int a, b;
+	cin >> a >> b;
+	vector<ll>ans;
 	for (int i = 0; i < a; ++i)
 	{
-		int t;
-		cin >> t;
-		x.pb(t);
-		if (t % 2 == 0) {
-			ev++;
+		ll sum = 0;
+		for (int j = 0; j < b; ++j)
+		{
+			int t;
+			cin >> t;
+			sum += t;
 		}
-		else {
-			od++;
-		}
-		sum += t;
+		ans.pb(sum);
 	}
-	if (sum % 2 != 0) {
-
-		cout << "YES" << endl;
+	for (auto v : ans) {
+		cout << v << " ";
 	}
-	else {
-		if (ev == 1 && od == 1) {
-			cout << "YES" << endl;
-		}
-		else {
-			cout << "NO" << endl;
-		}
-	}
-
+	cout << endl;
 }
+
 int main() {
 	op();
 #ifndef ONLINE_JUDGE
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 #endif
-	int t = 1;
-	cin >> t;
-	while (t--) {
+	test(t) {
 		solve();
 	}
 	return 0;
